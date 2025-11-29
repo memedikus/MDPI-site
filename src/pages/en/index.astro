@@ -1,6 +1,4 @@
 ---
-import Header from '../../components/Header.astro';
-import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
@@ -11,42 +9,45 @@ import Footer from '../../components/Footer.astro';
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Section of MDAI — Union of Russian Artists</title>
   <link rel="stylesheet" href="/styles/global.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Inter:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <Header lang="en">
-    <LanguageSwitcher slot="lang-switcher" current="en" />
-  </Header>
+  <main class="container" style="padding-top: 4rem;">
+    <h1>WE KEEP HANDS ALIVE.</h1>
+    <p>Monumental. Decorative. Applied.<br>In a digital age, we still believe in fire, metal, glass, and enamel.</p>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Section of Monumental, Decorative & Applied Arts</h1>
-      <p><em>Union of Russian Artists</em></p>
-      <p style="margin-top: 1rem;">
-        In an era of global reassessment of values, preserving and developing the traditions of Russian decorative and applied arts is a key path to affirming national culture on the world stage.
-      </p>
-    </section>
+    <div style="margin: 6rem 0; max-width: 600px;">
+      <h2>THE SECTION</h2>
+      <p>We don’t just preserve craft. We ignite it.</p>
+      <p>Active since the Soviet era — but make it art, not propaganda.</p>
+      <p>Our artists: enamel alchemists, ceramic rebels, metal whisperers.</p>
+      <p>We argue about tradition over cheap tea. You should join.</p>
+    </div>
 
-    <div style="display: grid; gap: 1rem; margin: 2rem 0;">
-      <a href="/en/artists" class="card">
-        <h2>Artists</h2>
-        <p>Masters of enamel, ceramics, glass, metal, textile</p>
-      </a>
-      <a href="/en/exhibitions" class="card">
-        <h2>Exhibitions</h2>
-        <p>«Impossible Art», «Enamel Artists of Russia» and more</p>
-      </a>
-      <a href="/en/news" class="card">
-        <h2>News</h2>
-        <p>Announcements, roundtables, public meetings</p>
-      </a>
-      <a href="/en/contacts" class="card">
-        <h2>Contacts</h2>
-        <p>Reach the section chair and members</p>
-      </a>
+    <div style="margin: 6rem 0;">
+      <h2>KEY PROJECTS</h2>
+      <p><strong>«IMPOSSIBLE ART»</strong><br>Where optics meet enamel. Moscow meets Tokyo.</p>
+      <p><strong>«ENAMEL UNDER FIRE»</strong><br>20 artists. 400°C. One mission: prove craft is not dead.</p>
+      <p style="margin-top: 1.5rem;"><a href="/en/projects" style="text-decoration: underline;">→ See all projects</a></p>
+    </div>
+
+    <div style="margin: 6rem 0;">
+      <h2>CHAIR</h2>
+      <img src="https://tcxp.ru/sites/default/files/section_cnairmans/_7.jpg" alt="Evgeny Matko" style="width: 120px; height: 120px; object-fit: cover; float: left; margin-right: 1.5rem; margin-bottom: 1rem;" />
+      <p><strong>EUGENE MATKO</strong></p>
+      <p>Chair / Enamel Alchemist / Ex-Stroganov Rebel</p>
+      <p>Failed to become a mural painter. Succeeded in turning molten glass into national heritage.<br>Collects Soviet-era enamel pins. Rumored to speak to kilns in Russian.</p>
+      <p><a href="https://artmatko.com" target="_blank" rel="noopener">→ His private archive</a></p>
     </div>
   </main>
 
-  <Footer lang="en" />
+  <footer class="container" style="padding: 4rem 0; border-top: 1px solid #000; font-family: 'Inter', sans-serif;">
+    <p>
+      <a href="/en/">HOME</a> · 
+      <a href="/en/projects">PROJECTS</a> · 
+      <a href="/en/contact">GET IN TOUCH</a>
+    </p>
+    <p style="margin-top: 1.5rem; color: #555;">© Union of Russian Artists. Section of MDAI. {new Date().getFullYear()}</p>
+  </footer>
 </body>
 </html>
