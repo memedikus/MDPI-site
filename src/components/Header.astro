@@ -1,0 +1,30 @@
+---
+const { lang = 'ru' } = Astro.props;
+const links = lang === 'ru' ? [
+  { href: '/ru/news', text: 'Новости' },
+  { href: '/ru/artists', text: 'Художники' },
+  { href: '/ru/exhibitions', text: 'Выставки' },
+  { href: '/ru/contacts', text: 'Контакты' },
+] : [
+  { href: '/en/news', text: 'News' },
+  { href: '/en/artists', text: 'Artists' },
+  { href: '/en/exhibitions', text: 'Exhibitions' },
+  { href: '/en/contacts', text: 'Contacts' },
+];
+---
+
+<header class="container" style="padding: 1rem 0;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+    <a href={lang === 'ru' ? '/ru/' : '/en/'} style="font-weight: bold; font-size: 1.4rem; white-space: nowrap;">
+      ТСХР — Секция МДиПИ
+    </a>
+    <nav>
+      <ul style="display: flex; flex-wrap: wrap; gap: 1.5rem; list-style: none;">
+        {links.map(link => <li><a href={link.href}>{link.text}</a></li>)}
+      </ul>
+    </nav>
+    <div>
+      <slot name="lang-switcher" />
+    </div>
+  </div>
+</header>
