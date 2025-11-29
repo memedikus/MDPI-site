@@ -1,0 +1,37 @@
+---
+import Header from '../../components/Header.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import Footer from '../../components/Footer.astro';
+
+const news = await Astro.glob('../../content/ru/news/*.md');
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Новости — Секция МДиПИ</title>
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+  <Header lang="ru">
+    <LanguageSwitcher slot="lang-switcher" current="ru" />
+  </Header>
+
+  <main class="container">
+    <h1 style="margin: 2rem 0;">Новости</h1>
+    {news.map(item => {
+      const { title, date } = item.frontmatter;
+      return (
+        <div class="card">
+          <h3>{title}</h3>
+          <p><em>{date}</em></p>
+          <div style="margin-top: 0.5rem;">{item.body}</div>
+        </div>
+      );
+    })}
+  </main>
+
+  <Footer lang="ru" />
+</body>
+</html>
