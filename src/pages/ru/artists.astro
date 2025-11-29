@@ -1,0 +1,36 @@
+---
+import Header from '../../components/Header.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import Footer from '../../components/Footer.astro';
+import ArtistCard from '../../components/ArtistCard.astro';
+
+const artists = await Astro.glob('../../content/ru/artists/*.md');
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Художники — Секция МДиПИ</title>
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <Header lang="ru">
+    <LanguageSwitcher slot="lang-switcher" current="ru" />
+  </Header>
+
+  <main class="container">
+    <h1 style="margin: 2rem 0;">Художники секции</h1>
+    {artists.length > 0 ? (
+      <div style="display: grid; gap: 1.5rem;">
+        {artists.map(artist => <ArtistCard content={artist} />)}
+      </div>
+    ) : (
+      <p>Список художников пока пуст.</p>
+    )}
+  </main>
+
+  <Footer lang="ru" />
+</body>
+</html>
