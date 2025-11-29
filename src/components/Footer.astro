@@ -1,0 +1,10 @@
+---
+const { lang = 'ru' } = Astro.props;
+const copyright = lang === 'ru' 
+  ? '© ТСХР. Секция монументально-декоративного и прикладного искусства.' 
+  : '© Union of Russian Artists. Section of Monumental, Decorative & Applied Arts.';
+---
+
+<footer class="container" style="padding: 2rem 0; text-align: center; font-size: 0.9rem; color: #555;">
+  {copyright} {new Date().getFullYear()}
+</footer>
