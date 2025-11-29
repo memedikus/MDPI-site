@@ -1,0 +1,9 @@
+---
+const { current = 'ru' } = Astro.props;
+const other = current === 'ru' ? 'en' : 'ru';
+const otherLabel = current === 'ru' ? 'EN' : 'RU';
+const currentPath = Astro.url.pathname.replace(`/${current}/`, '/');
+const targetPath = `/${other}${currentPath}`;
+---
+
+<a href={targetPath} style="font-weight: bold; margin-left: 1rem; font-size: 1.1rem;">{otherLabel}</a>
