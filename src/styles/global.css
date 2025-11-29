@@ -1,9 +1,8 @@
 :root {
-  --bg: #ffffff;
-  --text: #111111;
-  --accent: #c92a2a;
-  --translucent: rgba(255, 255, 255, 0.85);
-  --border: rgba(0,0,0,0.1);
+  --black: #000;
+  --white: #fff;
+  --offwhite: #fafafa;
+  --red: #c92a2a;
 }
 
 * {
@@ -13,61 +12,47 @@
 }
 
 body {
+  background: var(--white);
+  color: var(--black);
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+  line-height: 1.4;
   padding-bottom: 4rem;
 }
 
 .container {
-  width: min(90%, 1200px);
+  width: min(90%, 640px);
   margin: 0 auto;
 }
 
-.hero {
-  background: var(--translucent);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 2rem 0;
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+h1, h2 {
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
 }
 
-.card {
-  background: var(--translucent);
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  transition: transform 0.2s, box-shadow 0.2s;
-  border: 1px solid var(--border);
-}
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+h1 {
+  font-size: 2.8rem;
+  max-width: 600px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+p {
+  margin-bottom: 1.25rem;
 }
 
 a {
-  color: var(--accent);
+  color: var(--black);
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
+
+img {
+  border-radius: 4px;
 }
 
-@media (max-width: 768px) {
-  .hero, .card {
-    padding: 1.2rem;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
   }
 }
