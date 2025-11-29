@@ -1,0 +1,52 @@
+---
+import Header from '../../components/Header.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Секция МДиПИ — ТСХР</title>
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <Header lang="ru">
+    <LanguageSwitcher slot="lang-switcher" current="ru" />
+  </Header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Секция монументально-декоративного и прикладного искусства</h1>
+      <p><em>Творческого Союза Художников России</em></p>
+      <p style="margin-top: 1rem;">
+        В эпоху глобальной переоценки ценностей сохранение и развитие традиций отечественного декоративного и прикладного искусства — один из путей утверждения российской культуры в мировом пространстве.
+      </p>
+    </section>
+
+    <div style="display: grid; gap: 1rem; margin: 2rem 0;">
+      <a href="/ru/artists" class="card">
+        <h2>Художники</h2>
+        <p>Мастера эмали, керамики, стекла, металла, текстиля</p>
+      </a>
+      <a href="/ru/exhibitions" class="card">
+        <h2>Выставки</h2>
+        <p>«Невозможное искусство», «Эмальеры России» и другие проекты</p>
+      </a>
+      <a href="/ru/news" class="card">
+        <h2>Новости</h2>
+        <p>Анонсы, круглые столы, встречи со зрителями</p>
+      </a>
+      <a href="/ru/contacts" class="card">
+        <h2>Контакты</h2>
+        <p>Связь с председателем секции и членами активов</p>
+      </a>
+    </div>
+  </main>
+
+  <Footer lang="ru" />
+</body>
+</html>
