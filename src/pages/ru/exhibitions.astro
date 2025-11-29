@@ -1,0 +1,40 @@
+---
+import Header from '../../components/Header.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Выставки — Секция МДиПИ</title>
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+  <Header lang="ru">
+    <LanguageSwitcher slot="lang-switcher" current="ru" />
+  </Header>
+
+  <main class="container">
+    <h1 style="margin: 2rem 0;">Выставки</h1>
+
+    <div class="hero">
+      <h2>«Невозможное искусство и оптические иллюзии»</h2>
+      <p>Международный выставочный проект, ставший традиционным для секции.</p>
+      <p>
+        <a href="https://tcxp.ru/sites/default/files/docs/impossible_art_catalog.pdf" target="_blank" rel="noopener">
+          📄 Скачать каталог выставки (PDF)
+        </a>
+      </p>
+    </div>
+
+    <div class="hero">
+      <h2>«Эмальеры России»</h2>
+      <p>Выставка пройдёт в ЦВЗ «Манеж» с 1 по 30 декабря 2025 года.</p>
+    </div>
+  </main>
+
+  <Footer lang="ru" />
+</body>
+</html>
