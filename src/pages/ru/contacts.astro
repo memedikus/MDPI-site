@@ -1,0 +1,49 @@
+---
+import Header from '../../components/Header.astro';
+import LanguageSwitcher from '../../components/LanguageSwitcher.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Контакты — Секция МДиПИ</title>
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+  <Header lang="ru">
+    <LanguageSwitcher slot="lang-switcher" current="ru" />
+  </Header>
+
+  <main class="container">
+    <h1 style="margin: 2rem 0;">Контакты</h1>
+
+    <div class="hero">
+      <img src="https://tcxp.ru/sites/default/files/section_cnairmans/_7.jpg" 
+           alt="Матько Евгений Евгеньевич" 
+           style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px; float: left; margin-right: 1rem;" />
+      <h2>Матько Евгений Евгеньевич</h2>
+      <p>Член-корреспондент Российской академии художеств</p>
+      <p>Председатель секции</p>
+      <p>Сайт художника: <a href="https://artmatko.com" target="_blank">artmatko.com</a></p>
+    </div>
+
+    <div class="hero">
+      <h2>Написать в секцию</h2>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: grid; gap: 1rem; margin-top: 1rem;">
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display: none;">
+          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
+        <input type="text" name="name" placeholder="Ваше имя" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px;" />
+        <input type="email" name="email" placeholder="Email" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px;" />
+        <textarea name="message" placeholder="Сообщение" rows="5" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px;"></textarea>
+        <button type="submit" style="background: #c92a2a; color: white; border: none; padding: 0.75rem; border-radius: 6px; cursor: pointer; font-weight: bold;">Отправить</button>
+      </form>
+    </div>
+  </main>
+
+  <Footer lang="ru" />
+</body>
+</html>
