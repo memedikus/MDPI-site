@@ -1,5 +1,5 @@
 ---
-// Простой HTML-редирект — работает на любом хостинге
+import Footer from '../../components/Footer.astro';
 ---
 
 <!DOCTYPE html>
@@ -7,16 +7,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Секция МДиПИ</title>
-  <meta http-equiv="refresh" content="0;url=/ru/" />
-  <link rel="canonical" href="/ru/" />
-  <style>
-    body { font-family: 'DM Mono', monospace; padding: 2rem; background: #fff; color: #000; }
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <title>Секция МДиПИ — ТСХР</title>
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Inter:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <p>→ Redirecting to Russian version…</p>
-  <p><a href="/ru/">If not redirected, click here</a></p>
+  <main class="container" style="padding-top: 4rem;">
+    <h1>WE KEEP HANDS ALIVE.</h1>
+    <p>Monumental. Decorative. Applied.<br>In a digital age, we still believe in fire, metal, glass, and enamel.</p>
+
+    <div style="margin: 6rem 0; max-width: 600px;">
+      <h2>THE SECTION</h2>
+      <p>We don’t just preserve craft. We ignite it.</p>
+      <p>Active since the Soviet era — but make it art, not propaganda.</p>
+      <p>Our artists: enamel alchemists, ceramic rebels, metal whisperers.</p>
+      <p>We argue about tradition over cheap tea. You should join.</p>
+    </div>
+
+    <div style="margin: 6rem 0;">
+      <h2>KEY PROJECTS</h2>
+      <p><strong>«IMPOSSIBLE ART»</strong><br>Where optics meet enamel. Moscow meets Tokyo.</p>
+      <p><strong>«ENAMEL UNDER FIRE»</strong><br>20 artists. 400°C. One mission: prove craft is not dead.</p>
+      <p style="margin-top: 1.5rem;"><a href="/ru/projects" style="text-decoration: underline;">→ See all projects</a></p>
+    </div>
+
+    <div style="margin: 6rem 0;">
+      <h2>CHAIR</h2>
+      <img src="https://tcxp.ru/sites/default/files/section_cnairmans/_7.jpg" alt="Евгений Матько" style="width: 120px; height: 120px; object-fit: cover; float: left; margin-right: 1.5rem; margin-bottom: 1rem;" />
+      <p><strong>EUGENE MATKO</strong></p>
+      <p>Chair / Enamel Alchemist / Ex-Stroganov Rebel</p>
+      <p>Failed to become a mural painter. Succeeded in turning molten glass into national heritage.<br>Collects Soviet-era enamel pins. Rumored to speak to kilns in Russian.</p>
+      <p><a href="https://artmatko.com" target="_blank" rel="noopener">→ His private archive</a></p>
+    </div>
+  </main>
+
+  <footer class="container" style="padding: 4rem 0; border-top: 1px solid #000; font-family: 'Inter', sans-serif;">
+    <p>
+      <a href="/ru/">HOME</a> · 
+      <a href="/ru/projects">PROJECTS</a> · 
+      <a href="/ru/contact">GET IN TOUCH</a>
+    </p>
+    <p style="margin-top: 1.5rem; color: #555;">© ТСХР. Секция МДиПИ. {new Date().getFullYear()}</p>
+  </footer>
 </body>
 </html>
